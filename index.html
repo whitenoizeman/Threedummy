@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>คำนวณชิปดัมมี่ • iOS Edition</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0A84FF">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+        <img src="logo.svg" alt="Logo" class="app-logo">
+        <div class="title">คำนวณชิปดัมมี่</div>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </header>
+    <main class="container">
+        <section class="card">
+            <form id="chipForm">
+                <label class="section-label">คะแนนผู้เล่น</label>
+                <div class="player-inputs">
+                    <div class="input-box"><label>A</label><input type="text" id="playerA" readonly></div>
+                    <div class="input-box"><label>B</label><input type="text" id="playerB" readonly></div>
+                    <div class="input-box"><label>C</label><input type="text" id="playerC" readonly></div>
+                </div>
+                <label class="section-label" style="margin-top:18px;">ค่าพูล</label>
+                <input type="text" id="pool" readonly value="0.05">
+                <button type="submit" class="ios-btn">คำนวณ</button>
+            </form>
+        </section>
+        <section class="card" id="resultSection" style="display:none;">
+            <h2 class="card-title">ผลลัพธ์</h2>
+            <div id="resultBody"></div>
+            <h3 class="card-title" style="margin-top:20px;">การชำระเงิน</h3>
+            <div id="paymentDetails"></div>
+        </section>
+    </main>
+
+    <div id="customKeyboard" class="keyboard">
+        <div class="row"><button data-val="1">1</button><button data-val="2">2</button><button data-val="3">3</button></div>
+        <div class="row"><button data-val="4">4</button><button data-val="5">5</button><button data-val="6">6</button></div>
+        <div class="row"><button data-val="7">7</button><button data-val="8">8</button><button data-val="9">9</button></div>
+        <div class="row"><button data-val="-">-</button><button data-val="0">0</button><button data-val=".">.</button></div>
+        <div class="row"><button class="del">ลบ</button><button class="ok">OK</button></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
